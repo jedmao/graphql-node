@@ -4,8 +4,14 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "ts-node src/index.ts",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "start": "ts-node src",
+    "dev": "ts-node-dev --no-notify --respawn --transpileOnly src",
+    "docker": "cd prisma && docker-compose up",
+    "prisma:setup": "npm run prisma:gen && npm run prisma:deploy && npm run prisma:seed",
+    "prisma:gen": "cd prisma && prisma generate",
+    "prisma:deploy": "cd prisma && prisma deploy",
+    "prisma:seed": "cd prisma && prisma seed"
   },
   "husky": {
     "hooks": {
@@ -34,17 +40,23 @@
     "@types/bcryptjs": "^2.4.2",
     "@types/jsonwebtoken": "^8.3.2",
     "bcryptjs": "2.4.3",
+    "graphql": "^14.4.2",
     "graphql-yoga": "1.18.1",
     "jsonwebtoken": "8.5.1",
+    "nexus": "^0.12.0-beta.6",
+    "nexus-prisma": "^0.3.7",
     "prisma-client-lib": "1.34.3",
     "ts-node": "^8.3.0",
-    "typescript": "^3.5.3"
+    "typescript": "3.4.x"
   },
   "devDependencies": {
     "@divyenduz/ts-graphql-plugin": "^0.1.0",
     "@playlyfe/gql": "^2.6.1",
+    "concurrently": "^4.1.1",
     "husky": "^3.0.1",
     "lint-staged": "^9.2.0",
-    "prettier": "^1.18.2"
+    "nexus-prisma-generate": "^0.3.7",
+    "prettier": "^1.18.2",
+    "ts-node-dev": "^1.0.0-pre.40"
   }
 }

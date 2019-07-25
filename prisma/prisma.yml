@@ -1,14 +1,13 @@
-# The HTTP endpoint for your Prisma API
-endpoint: ''
-
-# Points to the file that contains your datamodel
+endpoint: http://localhost:4466
 datamodel: datamodel.prisma
 
-# Specifies language & location for the generated Prisma client
 generate:
-  - generator: javascript-client
+  - generator: typescript-client
     output: ../src/generated/prisma-client
 
 hooks:
   post-deploy:
-    - prisma generate
+    - npx nexus-prisma-generate --output src/generated/nexus-prisma
+
+seed:
+  run: ts-node seed.ts
