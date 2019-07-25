@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
+    "allowJs": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "alwaysStrict": true,
     "baseUrl": "src",
     "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
+    "module": "commonjs",
     "moduleResolution": "node",
     "newLine": "LF",
     "noEmit": true,
@@ -15,8 +16,8 @@
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "strict": true,
-    "target": "es2015"
+    "plugins": [{ "name": "@divyenduz/ts-graphql-plugin" }],
+    "strict": true
   },
   "include": ["src"]
 }

@@ -1,3 +1,7 @@
 {
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "files.associations": {
+    "*.prisma": "graphql"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

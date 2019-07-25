@@ -1,8 +1,8 @@
 import { compare, hash } from 'bcryptjs'
 import { sign } from 'jsonwebtoken'
 
-import { APP_SECRET, getUserId } from 'utils'
-import FieldResolver from 'types/FieldResolver'
+import { APP_SECRET, getUserId } from '../utils'
+import FieldResolver from '../types/FieldResolver'
 
 export const post: FieldResolver = (_parent, { url, description }, context) => {
 	const userId = getUserId(context)

@@ -1,4 +1,4 @@
-import FieldResolver from 'types/FieldResolver'
+import FieldResolver from '../types/FieldResolver'
 
 export const postedBy: FieldResolver = (parent, _args, { prisma }) =>
 	prisma.link({ id: parent.id }).postedBy()

@@ -1,4 +1,4 @@
-import FieldResolver from 'types/FieldResolver'
+import FieldResolver from '../types/FieldResolver'
 
 export const feed: FieldResolver = async (_parent, args, { prisma }) => {
 	const where = args.filter

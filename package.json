@@ -30,6 +30,7 @@
     "trailingComma": "all"
   },
   "dependencies": {
+    "@queso/identity": "^1.0.0",
     "@types/bcryptjs": "^2.4.2",
     "@types/jsonwebtoken": "^8.3.2",
     "bcryptjs": "2.4.3",
@@ -40,6 +41,8 @@
     "typescript": "^3.5.3"
   },
   "devDependencies": {
+    "@divyenduz/ts-graphql-plugin": "^0.1.0",
+    "@playlyfe/gql": "^2.6.1",
     "husky": "^3.0.1",
     "lint-staged": "^9.2.0",
     "prettier": "^1.18.2"

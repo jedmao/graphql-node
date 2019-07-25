@@ -2,6 +2,6 @@
   "recommendations": [
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
-    "kumar-harsh.graphql-for-vscode"
+    "prisma.vscode-graphql"
   ]
 }
